@@ -6,8 +6,10 @@ image_resource:
     source: 
         repository: alpine
 
-run: 
-    path: psql 
-    args: 
-    - "-d ci_test -c 'SELECT * FROM ci.emp'"
+run:
+    path: sh
+    args:
+    -   -exc
+    -   |
+        scripts/exc-psql.sh
 
