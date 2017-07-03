@@ -4,7 +4,7 @@ platform: linux
 image_resource: 
     type: docker-image
     source: 
-        repository: alpine
+        repository: kiasaki/alpine-postgres
 
 run:
     path: psql -c "SELECT current_date"
