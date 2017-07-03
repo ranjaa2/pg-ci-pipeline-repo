@@ -1,5 +1,10 @@
-docker pull kiasaki/alpine-postgres
+FROM alpine:3.6
 
-make build
+RUN apk --no-cache --update add bash jq postgresql findutils
 
-docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d kiasaki/alpine-postgres
+ADD assets/ /opt/resource/
+ADD bin/ /opt/resource/
+
+WORKDIR /opt/resource/
+
+RUN chmod +x /opt/resource/in /opt/resource/out /opt/resource/check
