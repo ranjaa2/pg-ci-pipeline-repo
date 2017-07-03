@@ -11,5 +11,5 @@ run:
     args:
     -   -exc
     -   |
-        scripts/exc-psql.sh
+        pg-ci-pipeline-repo/scripts/exc-psql.sh
 
