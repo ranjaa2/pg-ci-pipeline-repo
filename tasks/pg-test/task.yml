@@ -7,9 +7,5 @@ image_resource:
         repository: alpine
 
 run:
-    path: sh
-    args:
-    -   -exc
-    -   |
-        pg-ci-pipeline-repo/scripts/exc-psql.sh
+    path: psql -c "SELECT current_date"
 
