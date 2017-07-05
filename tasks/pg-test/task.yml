@@ -7,5 +7,7 @@ image_resource:
         repository: kiasaki/alpine-postgres
 
 run:
-    path: echo "SELECT current_date"
+    path: echo
+    args: 
+    - SELECT current_date
 
