@@ -4,10 +4,10 @@ platform: linux
 image_resource: 
     type: docker-image
     source: 
-        repository: hello-world
+        repository: kiasaki/alpine-postgres
 
 run:
-    path: echo
+    path: psql
     args: 
-    - Hello, world!
+    - -c "SELECT current_date"
 
