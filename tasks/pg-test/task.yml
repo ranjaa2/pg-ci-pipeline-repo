@@ -7,7 +7,7 @@ image_resource:
         repository: hello-world
 
 run:
-    path: 
+    path: echo
     args: 
-    
+    - Hello, world!
 
